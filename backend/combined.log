@@ -1,0 +1,7 @@
+{"level":"info","message":{"duration":"15ms","method":"GET","path":"/","query":{},"status":404},"timestamp":"2025-10-15T03:28:27.956Z"}
+{"level":"info","message":{"duration":"14ms","method":"GET","path":"/","query":{},"status":404},"timestamp":"2025-10-15T03:45:39.990Z"}
+{"level":"info","message":{"duration":"2ms","method":"GET","path":"/","query":{},"status":404},"timestamp":"2025-10-15T03:45:48.226Z"}
+{"level":"info","message":{"duration":"12ms","method":"GET","path":"/","query":{},"status":404},"timestamp":"2025-10-15T03:46:50.636Z"}
+{"level":"info","message":{"duration":"2ms","method":"GET","path":"/dashboard","query":{},"status":404},"timestamp":"2025-10-15T03:46:56.266Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/dashboard/stats","query":{},"status":404},"timestamp":"2025-10-15T03:47:21.550Z"}
+{"level":"info","message":{"duration":"2ms","method":"GET","path":"/frontend/index.html","query":{},"status":404},"timestamp":"2025-10-15T03:49:01.044Z"}
