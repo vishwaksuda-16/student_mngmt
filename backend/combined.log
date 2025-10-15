@@ -5,3 +5,217 @@
 {"level":"info","message":{"duration":"2ms","method":"GET","path":"/dashboard","query":{},"status":404},"timestamp":"2025-10-15T03:46:56.266Z"}
 {"level":"info","message":{"duration":"1ms","method":"GET","path":"/dashboard/stats","query":{},"status":404},"timestamp":"2025-10-15T03:47:21.550Z"}
 {"level":"info","message":{"duration":"2ms","method":"GET","path":"/frontend/index.html","query":{},"status":404},"timestamp":"2025-10-15T03:49:01.044Z"}
+{"level":"info","message":{"duration":"18ms","method":"GET","path":"/","query":{},"status":404},"timestamp":"2025-10-15T04:09:05.591Z"}
+{"level":"info","message":{"duration":"17ms","method":"GET","params":{},"path":"/","query":{},"status":200},"timestamp":"2025-10-15T04:11:00.338Z"}
+{"level":"info","message":{"duration":"4ms","method":"GET","path":"/favicon.ico","query":{},"status":404},"timestamp":"2025-10-15T04:11:00.680Z"}
+{"level":"info","message":{"duration":"17ms","method":"GET","params":{},"path":"/","query":{},"status":200},"timestamp":"2025-10-15T04:20:48.868Z"}
+{"level":"error","message":"Error fetching courses The comparison function must be either a function or undefined: #<Object>","stack":"TypeError: The comparison function must be either a function or undefined: #<Object>\n    at Array.toSorted (<anonymous>)\n    at C:\\Users\\USER\\Student Mngmt App\\backend\\server.js:146:47\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-10-15T04:20:49.051Z"}
+{"level":"info","message":{"duration":"60ms","method":"GET","params":{},"path":"/api/courses","query":{},"status":500},"timestamp":"2025-10-15T04:20:49.058Z"}
+{"level":"error","message":"Error fetching courses The comparison function must be either a function or undefined: #<Object>","stack":"TypeError: The comparison function must be either a function or undefined: #<Object>\n    at Array.toSorted (<anonymous>)\n    at C:\\Users\\USER\\Student Mngmt App\\backend\\server.js:146:47\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-10-15T04:20:49.096Z"}
+{"level":"info","message":{"duration":"35ms","method":"GET","params":{},"path":"/api/courses","query":{},"status":500},"timestamp":"2025-10-15T04:20:49.099Z"}
+{"courseId":"68ef212f90474ce480b7ed2b","level":"info","message":"New course created:","name":"Web Programming","timestamp":"2025-10-15T04:21:03.499Z"}
+{"level":"info","message":{"body":{"description":"HTML,CSS","duration":3,"name":"Web Programming","status":"active"},"duration":"63ms","method":"POST","params":{},"path":"/api/courses","query":{},"status":201},"timestamp":"2025-10-15T04:21:03.503Z"}
+{"level":"error","message":"Error fetching courses The comparison function must be either a function or undefined: #<Object>","stack":"TypeError: The comparison function must be either a function or undefined: #<Object>\n    at Array.toSorted (<anonymous>)\n    at C:\\Users\\USER\\Student Mngmt App\\backend\\server.js:146:47\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-10-15T04:21:03.545Z"}
+{"level":"info","message":{"duration":"40ms","method":"GET","params":{},"path":"/api/courses","query":{},"status":500},"timestamp":"2025-10-15T04:21:03.548Z"}
+{"activeCourses":1,"activeStudents":0,"courseCounts":[],"graduates":0,"level":"info","message":"Dashboard statistics retrieved successfully:","successRate":0,"timestamp":"2025-10-15T04:21:03.757Z","totalCourses":1,"totalStudents":0}
+{"level":"info","message":{"duration":"207ms","method":"GET","params":{},"path":"/api/dashboard/stats","query":{},"status":200},"timestamp":"2025-10-15T04:21:03.760Z"}
+{"code":11000,"errorLabelSet":{},"errorResponse":{"code":11000,"errmsg":"E11000 duplicate key error collection: test.courses index: name_1 dup key: { name: \"Web Programming\" }","index":0,"keyPattern":{"name":1},"keyValue":{"name":"Web Programming"}},"index":0,"keyPattern":{"name":1},"keyValue":{"name":"Web Programming"},"level":"error","message":"Error creating course:  E11000 duplicate key error collection: test.courses index: name_1 dup key: { name: \"Web Programming\" }","stack":"MongoServerError: E11000 duplicate key error collection: test.courses index: name_1 dup key: { name: \"Web Programming\" }\n    at InsertOneOperation.handleOk (C:\\Users\\USER\\Student Mngmt App\\backend\\node_modules\\mongodb\\lib\\operations\\insert.js:51:19)\n    at tryOperation (C:\\Users\\USER\\Student Mngmt App\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:214:34)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async executeOperation (C:\\Users\\USER\\Student Mngmt App\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:78:16)\n    at async Collection.insertOne (C:\\Users\\USER\\Student Mngmt App\\backend\\node_modules\\mongodb\\lib\\collection.js:154:16)","timestamp":"2025-10-15T04:21:16.046Z"}
+{"level":"info","message":{"body":{"description":"HTML,CSS","duration":3,"name":"Web Programming","status":"active"},"duration":"55ms","method":"POST","params":{},"path":"/api/courses","query":{},"status":400},"timestamp":"2025-10-15T04:21:16.049Z"}
+{"code":11000,"errorLabelSet":{},"errorResponse":{"code":11000,"errmsg":"E11000 duplicate key error collection: test.courses index: name_1 dup key: { name: \"Web Programming\" }","index":0,"keyPattern":{"name":1},"keyValue":{"name":"Web Programming"}},"index":0,"keyPattern":{"name":1},"keyValue":{"name":"Web Programming"},"level":"error","message":"Error creating course:  E11000 duplicate key error collection: test.courses index: name_1 dup key: { name: \"Web Programming\" }","stack":"MongoServerError: E11000 duplicate key error collection: test.courses index: name_1 dup key: { name: \"Web Programming\" }\n    at InsertOneOperation.handleOk (C:\\Users\\USER\\Student Mngmt App\\backend\\node_modules\\mongodb\\lib\\operations\\insert.js:51:19)\n    at tryOperation (C:\\Users\\USER\\Student Mngmt App\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:214:34)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async executeOperation (C:\\Users\\USER\\Student Mngmt App\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:78:16)\n    at async Collection.insertOne (C:\\Users\\USER\\Student Mngmt App\\backend\\node_modules\\mongodb\\lib\\collection.js:154:16)","timestamp":"2025-10-15T04:21:17.122Z"}
+{"level":"info","message":{"body":{"description":"HTML,CSS","duration":3,"name":"Web Programming","status":"active"},"duration":"145ms","method":"POST","params":{},"path":"/api/courses","query":{},"status":400},"timestamp":"2025-10-15T04:21:17.124Z"}
+{"code":11000,"errorLabelSet":{},"errorResponse":{"code":11000,"errmsg":"E11000 duplicate key error collection: test.courses index: name_1 dup key: { name: \"Web Programming\" }","index":0,"keyPattern":{"name":1},"keyValue":{"name":"Web Programming"}},"index":0,"keyPattern":{"name":1},"keyValue":{"name":"Web Programming"},"level":"error","message":"Error creating course:  E11000 duplicate key error collection: test.courses index: name_1 dup key: { name: \"Web Programming\" }","stack":"MongoServerError: E11000 duplicate key error collection: test.courses index: name_1 dup key: { name: \"Web Programming\" }\n    at InsertOneOperation.handleOk (C:\\Users\\USER\\Student Mngmt App\\backend\\node_modules\\mongodb\\lib\\operations\\insert.js:51:19)\n    at tryOperation (C:\\Users\\USER\\Student Mngmt App\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:214:34)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async executeOperation (C:\\Users\\USER\\Student Mngmt App\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:78:16)\n    at async Collection.insertOne (C:\\Users\\USER\\Student Mngmt App\\backend\\node_modules\\mongodb\\lib\\collection.js:154:16)","timestamp":"2025-10-15T04:21:17.541Z"}
+{"level":"info","message":{"body":{"description":"HTML,CSS","duration":3,"name":"Web Programming","status":"active"},"duration":"51ms","method":"POST","params":{},"path":"/api/courses","query":{},"status":400},"timestamp":"2025-10-15T04:21:17.544Z"}
+{"level":"info","message":{"duration":"2ms","method":"GET","path":"/.well-known/appspecific/com.chrome.devtools.json","query":{},"status":404},"timestamp":"2025-10-15T04:21:23.090Z"}
+{"level":"info","message":{"duration":"13ms","method":"GET","params":{},"path":"/","query":{},"status":304},"timestamp":"2025-10-15T04:24:28.650Z"}
+{"level":"error","message":"Error fetching courses The comparison function must be either a function or undefined: #<Object>","stack":"TypeError: The comparison function must be either a function or undefined: #<Object>\n    at Array.sort (<anonymous>)\n    at C:\\Users\\USER\\Student Mngmt App\\backend\\server.js:146:47\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-10-15T04:24:28.977Z"}
+{"level":"info","message":{"duration":"284ms","method":"GET","params":{},"path":"/api/courses","query":{},"status":500},"timestamp":"2025-10-15T04:24:28.982Z"}
+{"level":"error","message":"Error fetching courses The comparison function must be either a function or undefined: #<Object>","stack":"TypeError: The comparison function must be either a function or undefined: #<Object>\n    at Array.sort (<anonymous>)\n    at C:\\Users\\USER\\Student Mngmt App\\backend\\server.js:146:47\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-10-15T04:24:29.024Z"}
+{"level":"info","message":{"duration":"38ms","method":"GET","params":{},"path":"/api/courses","query":{},"status":500},"timestamp":"2025-10-15T04:24:29.027Z"}
+{"level":"info","message":{"duration":"10ms","method":"GET","params":{},"path":"/","query":{},"status":304},"timestamp":"2025-10-15T04:26:02.966Z"}
+{"level":"info","message":"Retrieved 1 courses successfully","timestamp":"2025-10-15T04:26:03.045Z"}
+{"level":"info","message":{"duration":"68ms","method":"GET","params":{},"path":"/api/courses","query":{},"status":200},"timestamp":"2025-10-15T04:26:03.052Z"}
+{"level":"info","message":"Retrieved 0 students successfully","timestamp":"2025-10-15T04:26:03.090Z"}
+{"level":"info","message":{"duration":"34ms","method":"GET","params":{},"path":"/api/students","query":{},"status":200},"timestamp":"2025-10-15T04:26:03.092Z"}
+{"activeCourses":1,"activeStudents":0,"courseCounts":[],"graduates":0,"level":"info","message":"Dashboard statistics retrieved successfully:","successRate":0,"timestamp":"2025-10-15T04:26:03.248Z","totalCourses":1,"totalStudents":0}
+{"level":"info","message":{"duration":"190ms","method":"GET","params":{},"path":"/api/dashboard/stats","query":{},"status":304},"timestamp":"2025-10-15T04:26:03.251Z"}
+{"level":"info","message":"Retrieved 1 courses successfully","timestamp":"2025-10-15T04:26:06.857Z"}
+{"level":"info","message":{"duration":"58ms","method":"GET","params":{},"path":"/api/courses","query":{},"status":304},"timestamp":"2025-10-15T04:26:06.859Z"}
+{"courseId":"68ef212f90474ce480b7ed2b","level":"info","message":"Course deleted successfully:","name":"Web Programming","timestamp":"2025-10-15T04:26:10.241Z"}
+{"level":"info","message":{"duration":"120ms","method":"DELETE","params":{"id":"68ef212f90474ce480b7ed2b"},"path":"/api/courses/68ef212f90474ce480b7ed2b","query":{},"status":200},"timestamp":"2025-10-15T04:26:10.245Z"}
+{"level":"info","message":"Retrieved 0 courses successfully","timestamp":"2025-10-15T04:26:10.290Z"}
+{"level":"info","message":{"duration":"45ms","method":"GET","params":{},"path":"/api/courses","query":{},"status":200},"timestamp":"2025-10-15T04:26:10.293Z"}
+{"activeCourses":0,"activeStudents":0,"courseCounts":[],"graduates":0,"level":"info","message":"Dashboard statistics retrieved successfully:","successRate":0,"timestamp":"2025-10-15T04:26:10.492Z","totalCourses":0,"totalStudents":0}
+{"level":"info","message":{"duration":"193ms","method":"GET","params":{},"path":"/api/dashboard/stats","query":{},"status":200},"timestamp":"2025-10-15T04:26:10.495Z"}
+{"level":"info","message":"Retrieved 0 courses successfully","timestamp":"2025-10-15T04:26:17.589Z"}
+{"level":"info","message":{"duration":"58ms","method":"GET","params":{},"path":"/api/courses","query":{},"status":304},"timestamp":"2025-10-15T04:26:17.592Z"}
+{"level":"info","message":"Retrieved 0 students successfully","timestamp":"2025-10-15T04:26:18.433Z"}
+{"level":"info","message":{"duration":"32ms","method":"GET","params":{},"path":"/api/students","query":{},"status":304},"timestamp":"2025-10-15T04:26:18.435Z"}
+{"activeCourses":0,"activeStudents":0,"courseCounts":[],"graduates":0,"level":"info","message":"Dashboard statistics retrieved successfully:","successRate":0,"timestamp":"2025-10-15T04:26:18.598Z","totalCourses":0,"totalStudents":0}
+{"level":"info","message":{"duration":"195ms","method":"GET","params":{},"path":"/api/dashboard/stats","query":{},"status":304},"timestamp":"2025-10-15T04:26:18.600Z"}
+{"level":"info","message":"Retrieved 0 students successfully","timestamp":"2025-10-15T04:26:19.314Z"}
+{"level":"info","message":{"duration":"62ms","method":"GET","params":{},"path":"/api/students","query":{},"status":304},"timestamp":"2025-10-15T04:26:19.317Z"}
+{"activeCourses":0,"activeStudents":0,"courseCounts":[],"graduates":0,"level":"info","message":"Dashboard statistics retrieved successfully:","successRate":0,"timestamp":"2025-10-15T04:26:19.463Z","totalCourses":0,"totalStudents":0}
+{"level":"info","message":{"duration":"199ms","method":"GET","params":{},"path":"/api/dashboard/stats","query":{},"status":304},"timestamp":"2025-10-15T04:26:19.465Z"}
+{"level":"info","message":"Retrieved 0 students successfully","timestamp":"2025-10-15T04:26:21.820Z"}
+{"level":"info","message":{"duration":"55ms","method":"GET","params":{},"path":"/api/students","query":{},"status":304},"timestamp":"2025-10-15T04:26:21.822Z"}
+{"activeCourses":0,"activeStudents":0,"courseCounts":[],"graduates":0,"level":"info","message":"Dashboard statistics retrieved successfully:","successRate":0,"timestamp":"2025-10-15T04:26:21.986Z","totalCourses":0,"totalStudents":0}
+{"level":"info","message":{"duration":"219ms","method":"GET","params":{},"path":"/api/dashboard/stats","query":{},"status":304},"timestamp":"2025-10-15T04:26:21.989Z"}
+{"level":"info","message":"Retrieved 0 students successfully","timestamp":"2025-10-15T04:26:23.586Z"}
+{"level":"info","message":{"duration":"34ms","method":"GET","params":{},"path":"/api/students","query":{},"status":304},"timestamp":"2025-10-15T04:26:23.589Z"}
+{"activeCourses":0,"activeStudents":0,"courseCounts":[],"graduates":0,"level":"info","message":"Dashboard statistics retrieved successfully:","successRate":0,"timestamp":"2025-10-15T04:26:23.740Z","totalCourses":0,"totalStudents":0}
+{"level":"info","message":{"duration":"186ms","method":"GET","params":{},"path":"/api/dashboard/stats","query":{},"status":304},"timestamp":"2025-10-15T04:26:23.742Z"}
+{"level":"info","message":{"duration":"17ms","method":"GET","params":{},"path":"/","query":{},"status":200},"timestamp":"2025-10-15T04:32:17.847Z"}
+{"level":"info","message":"Retrieved 0 courses successfully","timestamp":"2025-10-15T04:32:18.016Z"}
+{"level":"info","message":{"duration":"51ms","method":"GET","params":{},"path":"/api/courses","query":{},"status":304},"timestamp":"2025-10-15T04:32:18.020Z"}
+{"level":"info","message":"Retrieved 0 courses successfully","timestamp":"2025-10-15T04:32:18.057Z"}
+{"level":"info","message":{"duration":"33ms","method":"GET","params":{},"path":"/api/courses","query":{},"status":304},"timestamp":"2025-10-15T04:32:18.059Z"}
+{"activeCourses":0,"activeStudents":0,"courseCounts":[],"graduates":0,"level":"info","message":"Dashboard statistics retrieved successfully:","successRate":0,"timestamp":"2025-10-15T04:32:24.052Z","totalCourses":0,"totalStudents":0}
+{"level":"info","message":{"duration":"241ms","method":"GET","params":{},"path":"/api/dashboard/stats","query":{},"status":304},"timestamp":"2025-10-15T04:32:24.055Z"}
+{"level":"info","message":"Retrieved 0 students successfully","timestamp":"2025-10-15T04:32:57.252Z"}
+{"level":"info","message":{"duration":"63ms","method":"GET","params":{},"path":"/api/students","query":{},"status":304},"timestamp":"2025-10-15T04:32:57.255Z"}
+{"activeCourses":0,"activeStudents":0,"courseCounts":[],"graduates":0,"level":"info","message":"Dashboard statistics retrieved successfully:","successRate":0,"timestamp":"2025-10-15T04:32:57.431Z","totalCourses":0,"totalStudents":0}
+{"level":"info","message":{"duration":"236ms","method":"GET","params":{},"path":"/api/dashboard/stats","query":{},"status":304},"timestamp":"2025-10-15T04:32:57.433Z"}
+{"level":"info","message":"Retrieved 0 courses successfully","timestamp":"2025-10-15T04:33:00.890Z"}
+{"level":"info","message":{"duration":"44ms","method":"GET","params":{},"path":"/api/courses","query":{},"status":304},"timestamp":"2025-10-15T04:33:00.893Z"}
+{"courseId":"68ef240a57da87c47978e947","level":"info","message":"New course created:","name":"Web Programming","timestamp":"2025-10-15T04:33:14.880Z"}
+{"level":"info","message":{"body":{"description":"HTML, CSS, JS","duration":3,"name":"Web Programming","status":"active"},"duration":"85ms","method":"POST","params":{},"path":"/api/courses","query":{},"status":201},"timestamp":"2025-10-15T04:33:14.884Z"}
+{"level":"info","message":"Retrieved 1 courses successfully","timestamp":"2025-10-15T04:33:14.927Z"}
+{"level":"info","message":{"duration":"40ms","method":"GET","params":{},"path":"/api/courses","query":{},"status":200},"timestamp":"2025-10-15T04:33:14.930Z"}
+{"activeCourses":1,"activeStudents":0,"courseCounts":[],"graduates":0,"level":"info","message":"Dashboard statistics retrieved successfully:","successRate":0,"timestamp":"2025-10-15T04:33:15.128Z","totalCourses":1,"totalStudents":0}
+{"level":"info","message":{"duration":"195ms","method":"GET","params":{},"path":"/api/dashboard/stats","query":{},"status":200},"timestamp":"2025-10-15T04:33:15.131Z"}
+{"level":"info","message":"Retrieved 0 students successfully","timestamp":"2025-10-15T04:33:18.416Z"}
+{"level":"info","message":{"duration":"58ms","method":"GET","params":{},"path":"/api/students","query":{},"status":304},"timestamp":"2025-10-15T04:33:18.418Z"}
+{"activeCourses":1,"activeStudents":0,"courseCounts":[],"graduates":0,"level":"info","message":"Dashboard statistics retrieved successfully:","successRate":0,"timestamp":"2025-10-15T04:33:18.589Z","totalCourses":1,"totalStudents":0}
+{"level":"info","message":{"duration":"229ms","method":"GET","params":{},"path":"/api/dashboard/stats","query":{},"status":304},"timestamp":"2025-10-15T04:33:18.592Z"}
+{"course":"68ef240a57da87c47978e947","level":"info","message":"New student created:","name":"Vishwak","studentId":"68ef242057da87c47978e957","timestamp":"2025-10-15T04:33:36.497Z"}
+{"level":"info","message":{"body":{"course":"68ef240a57da87c47978e947","email":"vish@gmail.com","enrollmentDate":"2025-10-14","name":"Vishwak","status":"active"},"duration":"47ms","method":"POST","params":{},"path":"/api/students","query":{},"status":201},"timestamp":"2025-10-15T04:33:36.499Z"}
+{"level":"info","message":"Retrieved 1 students successfully","timestamp":"2025-10-15T04:33:36.537Z"}
+{"level":"info","message":{"duration":"35ms","method":"GET","params":{},"path":"/api/students","query":{},"status":200},"timestamp":"2025-10-15T04:33:36.539Z"}
+{"activeCourses":1,"activeStudents":1,"courseCounts":[{"_id":"68ef240a57da87c47978e947","count":1}],"graduates":0,"level":"info","message":"Dashboard statistics retrieved successfully:","successRate":0,"timestamp":"2025-10-15T04:33:36.735Z","totalCourses":1,"totalStudents":1}
+{"level":"info","message":{"duration":"193ms","method":"GET","params":{},"path":"/api/dashboard/stats","query":{},"status":200},"timestamp":"2025-10-15T04:33:36.738Z"}
+{"activeCourses":1,"activeStudents":1,"courseCounts":[{"_id":"68ef240a57da87c47978e947","count":1}],"graduates":0,"level":"info","message":"Dashboard statistics retrieved successfully:","successRate":0,"timestamp":"2025-10-15T04:33:49.145Z","totalCourses":1,"totalStudents":1}
+{"level":"info","message":{"duration":"235ms","method":"GET","params":{},"path":"/api/dashboard/stats","query":{},"status":304},"timestamp":"2025-10-15T04:33:49.147Z"}
+{"level":"info","message":"Retrieved 1 students successfully","timestamp":"2025-10-15T04:33:57.441Z"}
+{"level":"info","message":{"duration":"36ms","method":"GET","params":{},"path":"/api/students","query":{},"status":304},"timestamp":"2025-10-15T04:33:57.442Z"}
+{"activeCourses":1,"activeStudents":1,"courseCounts":[{"_id":"68ef240a57da87c47978e947","count":1}],"graduates":0,"level":"info","message":"Dashboard statistics retrieved successfully:","successRate":0,"timestamp":"2025-10-15T04:33:57.624Z","totalCourses":1,"totalStudents":1}
+{"level":"info","message":{"duration":"218ms","method":"GET","params":{},"path":"/api/dashboard/stats","query":{},"status":304},"timestamp":"2025-10-15T04:33:57.626Z"}
+{"level":"info","message":{"duration":"16ms","method":"GET","params":{},"path":"/","query":{},"status":200},"timestamp":"2025-10-15T04:48:51.386Z"}
+{"level":"info","message":{"duration":"4ms","method":"GET","path":"/style.css","query":{},"status":404},"timestamp":"2025-10-15T04:48:51.419Z"}
+{"level":"info","message":{"duration":"2ms","method":"GET","path":"/index.js","query":{},"status":404},"timestamp":"2025-10-15T04:48:51.424Z"}
+{"level":"info","message":{"duration":"7ms","method":"GET","params":{},"path":"/","query":{},"status":200},"timestamp":"2025-10-15T04:51:37.700Z"}
+{"level":"info","message":{"duration":"2ms","method":"GET","path":"/style.css","query":{},"status":404},"timestamp":"2025-10-15T04:51:37.724Z"}
+{"level":"info","message":{"duration":"4ms","method":"GET","path":"/index.js","query":{},"status":404},"timestamp":"2025-10-15T04:51:37.733Z"}
+{"level":"info","message":{"duration":"6ms","method":"GET","params":{},"path":"/","query":{},"status":304},"timestamp":"2025-10-15T04:51:38.305Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/style.css","query":{},"status":404},"timestamp":"2025-10-15T04:51:38.330Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/index.js","query":{},"status":404},"timestamp":"2025-10-15T04:51:38.338Z"}
+{"level":"info","message":{"duration":"2ms","method":"GET","path":"/style.css","query":{},"status":404},"timestamp":"2025-10-15T04:51:42.734Z"}
+{"level":"info","message":{"duration":"2ms","method":"GET","path":"/.well-known/appspecific/com.chrome.devtools.json","query":{},"status":404},"timestamp":"2025-10-15T04:51:42.758Z"}
+{"level":"info","message":{"duration":"3ms","method":"GET","params":{},"path":"/","query":{},"status":200},"timestamp":"2025-10-15T04:57:47.443Z"}
+{"level":"info","message":{"duration":"2ms","method":"GET","path":"/public/style.css","query":{},"status":404},"timestamp":"2025-10-15T04:57:47.474Z"}
+{"level":"info","message":{"duration":"11ms","method":"GET","path":"/public/index.js","query":{},"status":404},"timestamp":"2025-10-15T04:57:47.491Z"}
+{"level":"info","message":{"duration":"3ms","method":"GET","path":"/.well-known/appspecific/com.chrome.devtools.json","query":{},"status":404},"timestamp":"2025-10-15T04:57:47.501Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","params":{},"path":"/","query":{},"status":304},"timestamp":"2025-10-15T04:57:48.107Z"}
+{"level":"info","message":{"duration":"3ms","method":"GET","path":"/.well-known/appspecific/com.chrome.devtools.json","query":{},"status":404},"timestamp":"2025-10-15T04:57:48.132Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/style.css","query":{},"status":404},"timestamp":"2025-10-15T04:57:48.135Z"}
+{"level":"info","message":{"duration":"2ms","method":"GET","path":"/public/index.js","query":{},"status":404},"timestamp":"2025-10-15T04:57:48.174Z"}
+{"level":"info","message":{"duration":"2ms","method":"GET","params":{},"path":"/","query":{},"status":304},"timestamp":"2025-10-15T04:57:53.210Z"}
+{"level":"info","message":{"duration":"6ms","method":"GET","path":"/public/style.css","query":{},"status":404},"timestamp":"2025-10-15T04:57:53.246Z"}
+{"level":"info","message":{"duration":"0ms","method":"GET","path":"/public/index.js","query":{},"status":404},"timestamp":"2025-10-15T04:57:53.249Z"}
+{"level":"info","message":{"duration":"11ms","method":"GET","params":{},"path":"/","query":{},"status":200},"timestamp":"2025-10-15T05:00:41.054Z"}
+{"level":"info","message":{"duration":"3ms","method":"GET","path":"/public/style.css","query":{},"status":404},"timestamp":"2025-10-15T05:00:41.069Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/index.js","query":{},"status":404},"timestamp":"2025-10-15T05:00:41.072Z"}
+{"level":"info","message":{"duration":"2ms","method":"GET","params":{},"path":"/","query":{},"status":304},"timestamp":"2025-10-15T05:00:41.847Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/style.css","query":{},"status":404},"timestamp":"2025-10-15T05:00:41.865Z"}
+{"level":"info","message":{"duration":"2ms","method":"GET","path":"/public/index.js","query":{},"status":404},"timestamp":"2025-10-15T05:00:41.868Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","params":{},"path":"/","query":{},"status":304},"timestamp":"2025-10-15T05:00:42.176Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/style.css","query":{},"status":404},"timestamp":"2025-10-15T05:00:42.197Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/index.js","query":{},"status":404},"timestamp":"2025-10-15T05:00:42.200Z"}
+{"level":"info","message":{"duration":"2ms","method":"GET","params":{},"path":"/","query":{},"status":304},"timestamp":"2025-10-15T05:00:42.390Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/style.css","query":{},"status":404},"timestamp":"2025-10-15T05:00:42.407Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/index.js","query":{},"status":404},"timestamp":"2025-10-15T05:00:42.409Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","params":{},"path":"/","query":{},"status":304},"timestamp":"2025-10-15T05:00:42.617Z"}
+{"level":"info","message":{"duration":"2ms","method":"GET","path":"/public/style.css","query":{},"status":404},"timestamp":"2025-10-15T05:00:42.633Z"}
+{"level":"info","message":{"duration":"2ms","method":"GET","path":"/public/index.js","query":{},"status":404},"timestamp":"2025-10-15T05:00:42.636Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","params":{},"path":"/","query":{},"status":304},"timestamp":"2025-10-15T05:00:42.974Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/style.css","query":{},"status":404},"timestamp":"2025-10-15T05:00:42.990Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/index.js","query":{},"status":404},"timestamp":"2025-10-15T05:00:42.992Z"}
+{"level":"info","message":{"duration":"7ms","method":"GET","params":{},"path":"/","query":{},"status":304},"timestamp":"2025-10-15T05:01:06.558Z"}
+{"level":"info","message":{"duration":"3ms","method":"GET","path":"/public/style.css","query":{},"status":404},"timestamp":"2025-10-15T05:01:06.577Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/index.js","query":{},"status":404},"timestamp":"2025-10-15T05:01:06.580Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/style.css","query":{},"status":404},"timestamp":"2025-10-15T05:01:10.667Z"}
+{"level":"info","message":{"duration":"2ms","method":"GET","path":"/.well-known/appspecific/com.chrome.devtools.json","query":{},"status":404},"timestamp":"2025-10-15T05:01:10.735Z"}
+{"level":"info","message":{"duration":"8ms","method":"GET","params":{},"path":"/","query":{},"status":304},"timestamp":"2025-10-15T05:02:29.483Z"}
+{"level":"info","message":{"duration":"4ms","method":"GET","path":"/public/style.css","query":{},"status":404},"timestamp":"2025-10-15T05:02:29.500Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/index.js","query":{},"status":404},"timestamp":"2025-10-15T05:02:29.503Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","params":{},"path":"/","query":{},"status":304},"timestamp":"2025-10-15T05:02:29.946Z"}
+{"level":"info","message":{"duration":"0ms","method":"GET","path":"/public/style.css","query":{},"status":404},"timestamp":"2025-10-15T05:02:29.961Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/index.js","query":{},"status":404},"timestamp":"2025-10-15T05:02:29.963Z"}
+{"level":"info","message":{"duration":"2ms","method":"GET","params":{},"path":"/","query":{},"status":304},"timestamp":"2025-10-15T05:02:30.343Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/style.css","query":{},"status":404},"timestamp":"2025-10-15T05:02:30.357Z"}
+{"level":"info","message":{"duration":"2ms","method":"GET","path":"/public/index.js","query":{},"status":404},"timestamp":"2025-10-15T05:02:30.360Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","params":{},"path":"/","query":{},"status":304},"timestamp":"2025-10-15T05:02:30.600Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/style.css","query":{},"status":404},"timestamp":"2025-10-15T05:02:30.615Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/index.js","query":{},"status":404},"timestamp":"2025-10-15T05:02:30.617Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","params":{},"path":"/","query":{},"status":304},"timestamp":"2025-10-15T05:02:30.800Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/style.css","query":{},"status":404},"timestamp":"2025-10-15T05:02:30.816Z"}
+{"level":"info","message":{"duration":"2ms","method":"GET","path":"/public/index.js","query":{},"status":404},"timestamp":"2025-10-15T05:02:30.818Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","params":{},"path":"/","query":{},"status":304},"timestamp":"2025-10-15T05:02:30.987Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/style.css","query":{},"status":404},"timestamp":"2025-10-15T05:02:31.001Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/index.js","query":{},"status":404},"timestamp":"2025-10-15T05:02:31.005Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","params":{},"path":"/","query":{},"status":304},"timestamp":"2025-10-15T05:02:31.180Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/style.css","query":{},"status":404},"timestamp":"2025-10-15T05:02:31.196Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/index.js","query":{},"status":404},"timestamp":"2025-10-15T05:02:31.198Z"}
+{"level":"info","message":{"duration":"2ms","method":"GET","params":{},"path":"/","query":{},"status":304},"timestamp":"2025-10-15T05:02:31.430Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/style.css","query":{},"status":404},"timestamp":"2025-10-15T05:02:31.446Z"}
+{"level":"info","message":{"duration":"0ms","method":"GET","path":"/public/index.js","query":{},"status":404},"timestamp":"2025-10-15T05:02:31.447Z"}
+{"level":"info","message":{"duration":"2ms","method":"GET","params":{},"path":"/","query":{},"status":304},"timestamp":"2025-10-15T05:02:31.628Z"}
+{"level":"info","message":{"duration":"0ms","method":"GET","path":"/public/style.css","query":{},"status":404},"timestamp":"2025-10-15T05:02:31.643Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/index.js","query":{},"status":404},"timestamp":"2025-10-15T05:02:31.645Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","params":{},"path":"/","query":{},"status":304},"timestamp":"2025-10-15T05:02:31.850Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/style.css","query":{},"status":404},"timestamp":"2025-10-15T05:02:31.864Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/index.js","query":{},"status":404},"timestamp":"2025-10-15T05:02:31.866Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","params":{},"path":"/","query":{},"status":304},"timestamp":"2025-10-15T05:02:32.060Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/style.css","query":{},"status":404},"timestamp":"2025-10-15T05:02:32.075Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/index.js","query":{},"status":404},"timestamp":"2025-10-15T05:02:32.077Z"}
+{"level":"info","message":{"duration":"2ms","method":"GET","params":{},"path":"/","query":{},"status":304},"timestamp":"2025-10-15T05:02:32.294Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/style.css","query":{},"status":404},"timestamp":"2025-10-15T05:02:32.312Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/index.js","query":{},"status":404},"timestamp":"2025-10-15T05:02:32.313Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","params":{},"path":"/","query":{},"status":304},"timestamp":"2025-10-15T05:02:33.323Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/style.css","query":{},"status":404},"timestamp":"2025-10-15T05:02:33.338Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/index.js","query":{},"status":404},"timestamp":"2025-10-15T05:02:33.339Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","params":{},"path":"/","query":{},"status":304},"timestamp":"2025-10-15T05:02:33.536Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/style.css","query":{},"status":404},"timestamp":"2025-10-15T05:02:33.549Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/index.js","query":{},"status":404},"timestamp":"2025-10-15T05:02:33.554Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","params":{},"path":"/","query":{},"status":304},"timestamp":"2025-10-15T05:02:33.710Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/style.css","query":{},"status":404},"timestamp":"2025-10-15T05:02:33.725Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/index.js","query":{},"status":404},"timestamp":"2025-10-15T05:02:33.727Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","params":{},"path":"/","query":{},"status":304},"timestamp":"2025-10-15T05:02:33.875Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/style.css","query":{},"status":404},"timestamp":"2025-10-15T05:02:33.890Z"}
+{"level":"info","message":{"duration":"1ms","method":"GET","path":"/public/index.js","query":{},"status":404},"timestamp":"2025-10-15T05:02:33.892Z"}
+{"level":"info","message":{"duration":"11ms","method":"GET","params":{},"path":"/","query":{},"status":200},"timestamp":"2025-10-15T05:04:59.480Z"}
+{"level":"info","message":"Retrieved 1 courses successfully","timestamp":"2025-10-15T05:04:59.547Z"}
+{"level":"info","message":{"duration":"54ms","method":"GET","params":{},"path":"/api/courses","query":{},"status":304},"timestamp":"2025-10-15T05:04:59.552Z"}
+{"level":"info","message":"Retrieved 1 students successfully","timestamp":"2025-10-15T05:04:59.590Z"}
+{"level":"info","message":{"duration":"33ms","method":"GET","params":{},"path":"/api/students","query":{},"status":304},"timestamp":"2025-10-15T05:04:59.592Z"}
+{"activeCourses":1,"activeStudents":1,"courseCounts":[{"_id":"68ef240a57da87c47978e947","count":1}],"graduates":0,"level":"info","message":"Dashboard statistics retrieved successfully:","successRate":0,"timestamp":"2025-10-15T05:04:59.759Z","totalCourses":1,"totalStudents":1}
+{"level":"info","message":{"duration":"200ms","method":"GET","params":{},"path":"/api/dashboard/stats","query":{},"status":304},"timestamp":"2025-10-15T05:04:59.761Z"}
+{"level":"info","message":"Retrieved 1 students successfully","timestamp":"2025-10-15T05:05:03.099Z"}
+{"level":"info","message":{"duration":"37ms","method":"GET","params":{},"path":"/api/students","query":{},"status":304},"timestamp":"2025-10-15T05:05:03.101Z"}
+{"activeCourses":1,"activeStudents":1,"courseCounts":[{"_id":"68ef240a57da87c47978e947","count":1}],"graduates":0,"level":"info","message":"Dashboard statistics retrieved successfully:","successRate":0,"timestamp":"2025-10-15T05:05:03.252Z","totalCourses":1,"totalStudents":1}
+{"level":"info","message":{"duration":"188ms","method":"GET","params":{},"path":"/api/dashboard/stats","query":{},"status":304},"timestamp":"2025-10-15T05:05:03.254Z"}
+{"level":"info","message":"Retrieved 1 courses successfully","timestamp":"2025-10-15T05:05:03.973Z"}
+{"level":"info","message":{"duration":"35ms","method":"GET","params":{},"path":"/api/courses","query":{},"status":304},"timestamp":"2025-10-15T05:05:03.975Z"}
+{"activeCourses":1,"activeStudents":1,"courseCounts":[{"_id":"68ef240a57da87c47978e947","count":1}],"graduates":0,"level":"info","message":"Dashboard statistics retrieved successfully:","successRate":0,"timestamp":"2025-10-15T05:05:04.965Z","totalCourses":1,"totalStudents":1}
+{"level":"info","message":{"duration":"206ms","method":"GET","params":{},"path":"/api/dashboard/stats","query":{},"status":304},"timestamp":"2025-10-15T05:05:04.967Z"}
+{"level":"info","message":"Retrieved 1 students successfully","timestamp":"2025-10-15T05:05:06.134Z"}
+{"level":"info","message":{"duration":"36ms","method":"GET","params":{},"path":"/api/students","query":{},"status":304},"timestamp":"2025-10-15T05:05:06.137Z"}
+{"activeCourses":1,"activeStudents":1,"courseCounts":[{"_id":"68ef240a57da87c47978e947","count":1}],"graduates":0,"level":"info","message":"Dashboard statistics retrieved successfully:","successRate":0,"timestamp":"2025-10-15T05:05:06.299Z","totalCourses":1,"totalStudents":1}
+{"level":"info","message":{"duration":"199ms","method":"GET","params":{},"path":"/api/dashboard/stats","query":{},"status":304},"timestamp":"2025-10-15T05:05:06.301Z"}
+{"level":"info","message":"Retrieved 1 courses successfully","timestamp":"2025-10-15T05:05:06.971Z"}
+{"level":"info","message":{"duration":"36ms","method":"GET","params":{},"path":"/api/courses","query":{},"status":304},"timestamp":"2025-10-15T05:05:06.973Z"}
+{"activeCourses":1,"activeStudents":1,"courseCounts":[{"_id":"68ef240a57da87c47978e947","count":1}],"graduates":0,"level":"info","message":"Dashboard statistics retrieved successfully:","successRate":0,"timestamp":"2025-10-15T05:05:08.291Z","totalCourses":1,"totalStudents":1}
+{"level":"info","message":{"duration":"224ms","method":"GET","params":{},"path":"/api/dashboard/stats","query":{},"status":304},"timestamp":"2025-10-15T05:05:08.293Z"}
+{"level":"info","message":"Retrieved 1 students successfully","timestamp":"2025-10-15T05:05:44.753Z"}
+{"level":"info","message":{"duration":"34ms","method":"GET","params":{},"path":"/api/students","query":{},"status":304},"timestamp":"2025-10-15T05:05:44.755Z"}
+{"activeCourses":1,"activeStudents":1,"courseCounts":[{"_id":"68ef240a57da87c47978e947","count":1}],"graduates":0,"level":"info","message":"Dashboard statistics retrieved successfully:","successRate":0,"timestamp":"2025-10-15T05:05:44.913Z","totalCourses":1,"totalStudents":1}
+{"level":"info","message":{"duration":"192ms","method":"GET","params":{},"path":"/api/dashboard/stats","query":{},"status":304},"timestamp":"2025-10-15T05:05:44.915Z"}

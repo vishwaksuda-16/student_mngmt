@@ -5,6 +5,7 @@ require('dotenv').config();
 const morgan = require('morgan');
 const { level } = require('winston');
 const winston = require('winston');
+const path = require("path");
 
 const app = express();
 
@@ -12,7 +13,9 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, '..', 'public')));
+
+
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017//student-management")
 .then(()=>console.log("Connected to MongoDB"))
@@ -134,9 +137,14 @@ const Course  = mongoose.model("Course", courseSchema);
 
 //Routes
 
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'frontend', 'index.html'));
+});
+
+
 app.get('/api/courses', async (req,res)=>{
     try{
-        const courses = (await Course.find()).toSorted({name:1});
+        const courses = await Course.find().sort({ name: 1 });
         logger.info(`Retrieved ${courses.length} courses successfully`);
         res.json(courses)
     } catch(error) {
@@ -227,6 +235,30 @@ app.get("/api/courses/:id", async (req, res) => {
 });
 
 // Student Routes
+app.get("/api/students/search", async (req, res) => {
+  try {
+    const searchTerm = req.query.q;
+    logger.info("Student search initiated:", { searchTerm });
+
+    const students = await Student.find({
+      $or: [
+        { name: { $regex: searchTerm, $options: "i" } },
+        { course: { $regex: searchTerm, $options: "i" } },
+        { email: { $regex: searchTerm, $options: "i" } },
+      ],
+    });
+
+    logger.info("Student search completed:", {
+      searchTerm,
+      resultsCount: students.length,
+    });
+    res.json(students);
+  } catch (error) {
+    logger.error("Error searching students:", error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
 app.get('/api/students/:id', async (req, res) => {
     try {
         const student = await Student.findById(req.params.id);
@@ -311,29 +343,6 @@ app.delete("/api/students/:id", async (req, res) => {
   }
 });
 
-app.get("/api/students/search", async (req, res) => {
-  try {
-    const searchTerm = req.query.q;
-    logger.info("Student search initiated:", { searchTerm });
-
-    const students = await Student.find({
-      $or: [
-        { name: { $regex: searchTerm, $options: "i" } },
-        { course: { $regex: searchTerm, $options: "i" } },
-        { email: { $regex: searchTerm, $options: "i" } },
-      ],
-    });
-
-    logger.info("Student search completed:", {
-      searchTerm,
-      resultsCount: students.length,
-    });
-    res.json(students);
-  } catch (error) {
-    logger.error("Error searching students:", error);
-    res.status(500).json({ message: error.message });
-  }
-});
 
 // Dashboard Stats
 app.get('/api/dashboard/stats', async (req, res) => {
