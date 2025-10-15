@@ -8,7 +8,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
     />
-
     <style>
       * {
         margin: 0;
@@ -23,10 +22,28 @@
         --background-color: #f1f5f9;
         --text-color: #1e293b;
         --sidebar-width: 250px;
+        --card-bg: #ffffff;
+        --border-color: #e2e8f0;
+        --hover-bg: #f8fafc;
+        --input-bg: #ffffff;
+      }
+
+      /* Dark Mode Variables */
+      body.dark-mode {
+        --primary-color: #3b82f6;
+        --secondary-color: #2563eb;
+        --background-color: #0f172a;
+        --text-color: #e2e8f0;
+        --card-bg: #1e293b;
+        --border-color: #334155;
+        --hover-bg: #334155;
+        --input-bg: #334155;
       }
 
       body {
         background-color: var(--background-color);
+        color: var(--text-color);
+        transition: background-color 0.3s ease, color 0.3s ease;
       }
 
       .container {
@@ -37,11 +54,12 @@
       /* Sidebar Styles */
       .sidebar {
         width: var(--sidebar-width);
-        background-color: white;
+        background-color: var(--card-bg);
         padding: 20px;
         box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
         position: fixed;
         height: 100vh;
+        transition: background-color 0.3s ease;
       }
 
       .logo {
@@ -88,20 +106,22 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 30px;
-        background-color: white;
+        background-color: var(--card-bg);
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease;
       }
 
       .search-bar {
         display: flex;
         align-items: center;
         gap: 10px;
-        background-color: var(--background-color);
+        background-color: var(--input-bg);
         padding: 10px 15px;
         border-radius: 8px;
         width: 300px;
+        transition: background-color 0.3s ease;
       }
 
       .search-bar input {
@@ -109,12 +129,22 @@
         background: none;
         outline: none;
         width: 100%;
+        color: var(--text-color);
+      }
+
+      .search-bar input::placeholder {
+        color: #64748b;
+      }
+
+      body.dark-mode .search-bar input::placeholder {
+        color: #94a3b8;
       }
 
       .user-profile {
         display: flex;
         align-items: center;
         gap: 10px;
+        color: var(--text-color);
       }
 
       .user-avatar {
@@ -137,10 +167,11 @@
       }
 
       .card {
-        background-color: white;
+        background-color: var(--card-bg);
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease;
       }
 
       .card-header {
@@ -166,6 +197,10 @@
         color: #64748b;
       }
 
+      body.dark-mode .card-title {
+        color: #94a3b8;
+      }
+
       .card-value {
         font-size: 24px;
         font-weight: bold;
@@ -174,10 +209,11 @@
 
       /* Student List Table */
       .student-list {
-        background-color: white;
+        background-color: var(--card-bg);
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease;
       }
 
       .table-header {
@@ -213,17 +249,22 @@
       td {
         padding: 12px;
         text-align: left;
-        border-bottom: 1px solid #e2e8f0;
+        border-bottom: 1px solid var(--border-color);
+        color: var(--text-color);
       }
 
       th {
-        background-color: #f8fafc;
+        background-color: var(--hover-bg);
         color: #64748b;
         font-weight: 600;
       }
 
+      body.dark-mode th {
+        color: #94a3b8;
+      }
+
       tr:hover {
-        background-color: #f8fafc;
+        background-color: var(--hover-bg);
       }
 
       .status-badge {
@@ -238,9 +279,19 @@
         color: #166534;
       }
 
+      body.dark-mode .status-active {
+        background-color: #14532d;
+        color: #86efac;
+      }
+
       .status-inactive {
         background-color: #fee2e2;
         color: #991b1b;
+      }
+
+      body.dark-mode .status-inactive {
+        background-color: #7f1d1d;
+        color: #fca5a5;
       }
 
       .action-buttons {
@@ -254,6 +305,11 @@
         border-radius: 5px;
         cursor: pointer;
         font-size: 14px;
+        transition: opacity 0.3s ease;
+      }
+
+      .action-btn:hover {
+        opacity: 0.8;
       }
 
       .edit-btn {
@@ -261,9 +317,19 @@
         color: var(--primary-color);
       }
 
+      body.dark-mode .edit-btn {
+        background-color: #1e3a8a;
+        color: #93c5fd;
+      }
+
       .delete-btn {
         background-color: #fee2e2;
         color: #dc2626;
+      }
+
+      body.dark-mode .delete-btn {
+        background-color: #7f1d1d;
+        color: #fca5a5;
       }
 
       /* Modal Styles */
@@ -277,14 +343,22 @@
         background-color: rgba(0, 0, 0, 0.5);
         justify-content: center;
         align-items: center;
+        z-index: 1000;
+      }
+
+      body.dark-mode .modal {
+        background-color: rgba(0, 0, 0, 0.7);
       }
 
       .modal-content {
-        background-color: white;
+        background-color: var(--card-bg);
         padding: 30px;
         border-radius: 10px;
         width: 500px;
         max-width: 90%;
+        max-height: 90vh;
+        overflow-y: auto;
+        transition: background-color 0.3s ease;
       }
 
       .modal-header {
@@ -294,12 +368,24 @@
         margin-bottom: 20px;
       }
 
+      .modal-header h2 {
+        color: var(--text-color);
+      }
+
       .close-btn {
         background: none;
         border: none;
         font-size: 20px;
         cursor: pointer;
         color: #64748b;
+      }
+
+      body.dark-mode .close-btn {
+        color: #94a3b8;
+      }
+
+      .close-btn:hover {
+        color: var(--text-color);
       }
 
       .form-group {
@@ -313,16 +399,21 @@
       }
 
       .form-group input,
-      .form-group select {
+      .form-group select,
+      textarea {
         width: 100%;
         padding: 8px;
-        border: 1px solid #e2e8f0;
+        border: 1px solid var(--border-color);
         border-radius: 5px;
         outline: none;
+        background-color: var(--input-bg);
+        color: var(--text-color);
+        transition: all 0.3s ease;
       }
 
       .form-group input:focus,
-      .form-group select:focus {
+      .form-group select:focus,
+      textarea:focus {
         border-color: var(--primary-color);
       }
 
@@ -340,6 +431,7 @@
       .submit-btn:hover {
         background-color: var(--secondary-color);
       }
+
       .notification {
         position: fixed;
         top: 20px;
@@ -372,6 +464,10 @@
         color: #64748b;
       }
 
+      body.dark-mode .empty-state {
+        color: #94a3b8;
+      }
+
       .empty-state i {
         font-size: 48px;
         margin-bottom: 20px;
@@ -380,16 +476,17 @@
 
       .empty-state h3 {
         margin-bottom: 10px;
-        color: #1e293b;
+        color: var(--text-color);
       }
 
       .course-list,
       .student-list {
-        background-color: white;
+        background-color: var(--card-bg);
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         margin-top: 20px;
+        transition: background-color 0.3s ease;
       }
 
       .section {
@@ -405,18 +502,9 @@
       }
 
       textarea {
-        width: 100%;
-        padding: 8px;
-        border: 1px solid #e2e8f0;
-        border-radius: 5px;
         resize: vertical;
         min-height: 100px;
         font-family: inherit;
-      }
-
-      textarea:focus {
-        border-color: var(--primary-color);
-        outline: none;
       }
 
       .loading-spinner {
@@ -432,6 +520,10 @@
         align-items: center;
       }
 
+      body.dark-mode .loading-spinner {
+        background-color: rgba(15, 23, 42, 0.8);
+      }
+
       .loading-spinner.active {
         display: flex;
       }
@@ -439,7 +531,7 @@
       .spinner {
         width: 50px;
         height: 50px;
-        border: 5px solid #f3f3f3;
+        border: 5px solid var(--border-color);
         border-top: 5px solid var(--primary-color);
         border-radius: 50%;
         animation: spin 1s linear infinite;
@@ -452,6 +544,275 @@
         100% {
           transform: rotate(360deg);
         }
+      }
+
+      /* Reports Section Styles */
+      .reports-container {
+        display: grid;
+        gap: 20px;
+      }
+
+      .report-filters {
+        background-color: var(--card-bg);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        gap: 15px;
+        align-items: end;
+        flex-wrap: wrap;
+        transition: background-color 0.3s ease;
+      }
+
+      .filter-group {
+        flex: 1;
+        min-width: 200px;
+      }
+
+      .filter-group label {
+        display: block;
+        margin-bottom: 5px;
+        color: var(--text-color);
+        font-weight: 500;
+      }
+
+      .filter-group select,
+      .filter-group input {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid var(--border-color);
+        border-radius: 5px;
+        outline: none;
+        background-color: var(--input-bg);
+        color: var(--text-color);
+      }
+
+      .report-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+      }
+
+      .report-card {
+        background-color: var(--card-bg);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease;
+      }
+
+      .report-card h3 {
+        color: var(--text-color);
+        margin-bottom: 15px;
+        font-size: 18px;
+      }
+
+      .chart-container {
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .stat-list {
+        list-style: none;
+      }
+
+      .stat-item {
+        padding: 10px 0;
+        border-bottom: 1px solid var(--border-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .stat-item:last-child {
+        border-bottom: none;
+      }
+
+      .stat-label {
+        color: #64748b;
+      }
+
+      body.dark-mode .stat-label {
+        color: #94a3b8;
+      }
+
+      .stat-value {
+        font-weight: 600;
+        color: var(--text-color);
+        font-size: 18px;
+      }
+
+      .export-btn {
+        background-color: #10b981;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .export-btn:hover {
+        background-color: #059669;
+      }
+
+      /* Settings Section Styles */
+      .settings-container {
+        max-width: 800px;
+      }
+
+      .settings-section {
+        background-color: var(--card-bg);
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        transition: background-color 0.3s ease;
+      }
+
+      .settings-section h3 {
+        color: var(--text-color);
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid var(--primary-color);
+      }
+
+      .settings-option {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .settings-option:last-child {
+        border-bottom: none;
+      }
+
+      .settings-label {
+        flex: 1;
+      }
+
+      .settings-label h4 {
+        color: var(--text-color);
+        margin-bottom: 5px;
+      }
+
+      .settings-label p {
+        color: #64748b;
+        font-size: 14px;
+      }
+
+      body.dark-mode .settings-label p {
+        color: #94a3b8;
+      }
+
+      .toggle-switch {
+        position: relative;
+        width: 50px;
+        height: 24px;
+        background-color: #cbd5e1;
+        border-radius: 24px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      body.dark-mode .toggle-switch {
+        background-color: #475569;
+      }
+
+      .toggle-switch.active {
+        background-color: var(--primary-color);
+      }
+
+      .toggle-switch::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: white;
+        top: 2px;
+        left: 2px;
+        transition: transform 0.3s;
+      }
+
+      .toggle-switch.active::after {
+        transform: translateX(26px);
+      }
+
+      .danger-zone {
+        background-color: #fef2f2;
+        border: 1px solid #fecaca;
+      }
+
+      body.dark-mode .danger-zone {
+        background-color: #450a0a;
+        border: 1px solid #7f1d1d;
+      }
+
+      .danger-zone h3 {
+        color: #dc2626;
+        border-bottom-color: #dc2626;
+      }
+
+      body.dark-mode .danger-zone h3 {
+        color: #fca5a5;
+        border-bottom-color: #fca5a5;
+      }
+
+      .danger-btn {
+        background-color: #dc2626;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .danger-btn:hover {
+        background-color: #b91c1c;
+      }
+
+      .bar-chart {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-around;
+        height: 200px;
+        gap: 10px;
+        padding: 20px 0;
+      }
+
+      .bar {
+        flex: 1;
+        background: linear-gradient(to top, var(--primary-color), var(--secondary-color));
+        border-radius: 5px 5px 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        color: white;
+        font-weight: 600;
+        padding: 5px;
+        min-height: 30px;
+        position: relative;
+      }
+
+      .bar-label {
+        position: absolute;
+        bottom: -25px;
+        font-size: 12px;
+        color: #64748b;
+        text-align: center;
+        width: 100%;
+      }
+
+      body.dark-mode .bar-label {
+        color: #94a3b8;
       }
     </style>
   </head>
@@ -628,13 +989,140 @@
 
         <!-- Reports Section -->
         <div id="reportsSection" class="section">
-          <h2>Reports Coming Soon</h2>
+          <div class="reports-container">
+            <div class="report-filters">
+              <div class="filter-group">
+                <label>Report Type</label>
+                <select id="reportType" onchange="updateReports()">
+                  <option value="overview">Overview</option>
+                  <option value="courses">Course Analytics</option>
+                  <option value="students">Student Analytics</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <label>Time Period</label>
+                <select id="timePeriod" onchange="updateReports()">
+                  <option value="all">All Time</option>
+                  <option value="month">This Month</option>
+                  <option value="quarter">This Quarter</option>
+                  <option value="year">This Year</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <label>&nbsp;</label>
+                <button class="export-btn" onclick="exportReport()">
+                  <i class="fas fa-download"></i>
+                  Export Report
+                </button>
+              </div>
+            </div>
+
+            <div class="report-cards">
+              <div class="report-card">
+                <h3><i class="fas fa-users"></i> Enrollment Statistics</h3>
+                <ul class="stat-list">
+                  <li class="stat-item">
+                    <span class="stat-label">Total Enrolled</span>
+                    <span class="stat-value" id="reportTotalStudents">0</span>
+                  </li>
+                  <li class="stat-item">
+                    <span class="stat-label">Active Students</span>
+                    <span class="stat-value" id="reportActiveStudents">0</span>
+                  </li>
+                  <li class="stat-item">
+                    <span class="stat-label">Graduated</span>
+                    <span class="stat-value" id="reportGraduates">0</span>
+                  </li>
+                  <li class="stat-item">
+                    <span class="stat-label">Completion Rate</span>
+                    <span class="stat-value" id="reportCompletionRate">0%</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="report-card">
+                <h3><i class="fas fa-chart-bar"></i> Students by Course</h3>
+                <div class="chart-container" id="courseChart">
+                  <div class="bar-chart" id="barChart"></div>
+                </div>
+              </div>
+
+              <div class="report-card">
+                <h3><i class="fas fa-book"></i> Course Performance</h3>
+                <ul class="stat-list" id="coursePerformanceList">
+                  <li class="stat-item">
+                    <span class="stat-label">Loading...</span>
+                    <span class="stat-value">-</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="report-card">
+                <h3><i class="fas fa-calendar-alt"></i> Enrollment Trends</h3>
+                <ul class="stat-list">
+                  <li class="stat-item">
+                    <span class="stat-label">This Month</span>
+                    <span class="stat-value" id="enrollmentThisMonth">0</span>
+                  </li>
+                  <li class="stat-item">
+                    <span class="stat-label">Last Month</span>
+                    <span class="stat-value" id="enrollmentLastMonth">0</span>
+                  </li>
+                  <li class="stat-item">
+                    <span class="stat-label">Growth</span>
+                    <span class="stat-value" id="enrollmentGrowth">0%</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Settings Section -->
         <div id="settingsSection" class="section">
-          <h2>Settings Coming Soon</h2>
+          <div class="settings-container">
+        <!-- Appearance Settings -->
+          <div class="settings-section">
+            <h3><i class="fas fa-palette"></i> Appearance</h3>
+            <div class="settings-option">
+                <div class="settings-label">
+                    <h4>Dark Mode</h4>
+                    <p>Switch between light and dark theme</p>
+                </div>
+                <div class="toggle-switch" id="darkModeToggle" onclick="toggleDarkMode()"></div>
+            </div>
         </div>
+
+        <!-- Data Management -->
+        <div class="settings-section">
+            <h3><i class="fas fa-database"></i> Data Management</h3>
+            <div class="settings-option">
+                <div class="settings-label">
+                    <h4>Export All Data</h4>
+                    <p>Download a backup of all students, courses, and settings</p>
+                </div>
+                <button class="export-btn" onclick="exportAllData()">
+                    <i class="fas fa-download"></i> Export
+                </button>
+            </div>
+        </div>
+
+        <!-- Danger Zone -->
+        <div class="settings-section danger-zone">
+            <h3><i class="fas fa-exclamation-triangle"></i> Danger Zone</h3>
+            <div class="settings-option">
+                <div class="settings-label">
+                    <h4>Clear All Data</h4>
+                    <p>Permanently delete all students and courses. This action cannot be undone!</p>
+                </div>
+                <button class="danger-btn" onclick="confirmClearAllData()">
+                    <i class="fas fa-trash-alt"></i> Clear All Data
+                          </button>
+                      </div>
+                  </div>
+              </div>
+        </div>
+
       </div>
     </div>
 
@@ -741,21 +1229,21 @@
     <div class="loading-spinner">
       <div class="spinner"></div>
     </div>
-
     <script>
-      const API_BASE_URL = "http://localhost:3000";
+      const API_BASE_URL = "http://localhost:5000";
       let students = [];
       let courses = [];
       let currentSection = "dashboard";
       let editingId = null;
       let editingCourseId = null;
-      let deleteType = ""; // 'student' or 'course'
+      let deleteType = "";
       let deleteId = null;
+      let appSettings = {
+        darkMode: false
+      };
 
       const studentTableBody = document.getElementById("studentTableBody");
-      const allStudentsTableBody = document.getElementById(
-        "allStudentsTableBody"
-      );
+      const allStudentsTableBody = document.getElementById("allStudentsTableBody");
       const courseTableBody = document.getElementById("courseTableBody");
       const studentModal = document.getElementById("studentModal");
       const courseModal = document.getElementById("courseModal");
@@ -767,19 +1255,16 @@
       // Initialize the dashboard
       document.addEventListener("DOMContentLoaded", async () => {
         initializeEventListeners();
+        loadSettings();
         await checkAndLoadData();
       });
 
       // Initialize all event listeners
       function initializeEventListeners() {
-        // Form submissions
         studentForm.addEventListener("submit", handleFormSubmit);
         courseForm.addEventListener("submit", handleCourseFormSubmit);
-
-        // Search functionality
         searchInput.addEventListener("input", handleSearch);
 
-        // Navigation
         document.querySelectorAll(".nav-item").forEach((item) => {
           item.addEventListener("click", () => {
             const section = item.dataset.section;
@@ -787,10 +1272,11 @@
           });
         });
 
-        // Modal outside click handlers
         window.onclick = (event) => {
           if (event.target === studentModal) closeModal();
           if (event.target === courseModal) closeCourseModal();
+          if (event.target === document.getElementById("deleteConfirmationModal"))
+            closeDeleteModal();
         };
       }
 
@@ -800,7 +1286,6 @@
         try {
           await loadCourses();
 
-          // Check if we have any courses
           if (courses.length === 0) {
             showNotification(
               "Please add courses before managing students",
@@ -824,7 +1309,6 @@
       function navigateToSection(section) {
         currentSection = section;
 
-        // Update active nav item
         document.querySelectorAll(".nav-item").forEach((item) => {
           item.classList.remove("active");
           if (item.dataset.section === section) {
@@ -832,20 +1316,19 @@
           }
         });
 
-        // Hide all sections
         document.querySelectorAll(".section").forEach((section) => {
           section.classList.remove("active");
         });
 
-        // Show selected section
         document.getElementById(`${section}Section`).classList.add("active");
 
-        // Refresh data when switching sections
         if (section === "courses") {
           loadCourses();
         } else if (section === "students" || section === "dashboard") {
           loadStudents();
           updateDashboardStats();
+        } else if (section === "reports") {
+          updateReports();
         }
       }
 
@@ -857,7 +1340,6 @@
 
           const stats = await response.json();
 
-          // Update dashboard cards
           document.querySelector(".card:nth-child(1) .card-value").textContent =
             stats.totalStudents.toLocaleString();
           document.querySelector(".card:nth-child(2) .card-value").textContent =
@@ -939,8 +1421,7 @@
       async function deleteStudent(id) {
         deleteType = "student";
         deleteId = id;
-        document.getElementById("deleteConfirmationModal").style.display =
-          "flex";
+        document.getElementById("deleteConfirmationModal").style.display = "flex";
       }
 
       // CRUD Operations for Courses
@@ -977,13 +1458,11 @@
       async function deleteCourse(id) {
         deleteType = "course";
         deleteId = id;
-        document.getElementById("deleteConfirmationModal").style.display =
-          "flex";
+        document.getElementById("deleteConfirmationModal").style.display = "flex";
       }
 
       function closeDeleteModal() {
-        document.getElementById("deleteConfirmationModal").style.display =
-          "none";
+        document.getElementById("deleteConfirmationModal").style.display = "none";
         deleteType = "";
         deleteId = null;
       }
@@ -1090,7 +1569,11 @@
           await updateDashboardStats();
         } catch (error) {
           console.error("Error:", error);
-          showNotification("Error saving course data", "error");
+          let errorMessage = error.message;
+          if (errorMessage.includes("duplicate key") || errorMessage.includes("E11000")) {
+            errorMessage = "A course with this name already exists. Please use a different name.";
+          }
+          showNotification(errorMessage, "error");
         } finally {
           hideLoading();
         }
@@ -1101,7 +1584,7 @@
         const tables = [studentTableBody, allStudentsTableBody];
 
         tables.forEach((table) => {
-          if (!table) return; // Skip if table doesn't exist
+          if (!table) return;
 
           table.innerHTML = "";
 
@@ -1238,8 +1721,7 @@
         courseModal.style.display = "flex";
         editingCourseId = null;
         courseForm.reset();
-        document.getElementById("courseModalTitle").textContent =
-          "Add New Course";
+        document.getElementById("courseModalTitle").textContent = "Add New Course";
       }
 
       function closeCourseModal() {
@@ -1248,7 +1730,6 @@
         courseForm.reset();
       }
 
-      // Update the editStudent function
       async function editStudent(id) {
         showLoading();
         try {
@@ -1281,7 +1762,6 @@
         }
       }
 
-      // Update the editCourse function
       async function editCourse(id) {
         showLoading();
         try {
@@ -1294,11 +1774,9 @@
           const course = await response.json();
 
           editingCourseId = id;
-          document.getElementById("courseModalTitle").textContent =
-            "Edit Course";
+          document.getElementById("courseModalTitle").textContent = "Edit Course";
           document.getElementById("courseName").value = course.name;
-          document.getElementById("courseDescription").value =
-            course.description;
+          document.getElementById("courseDescription").value = course.description;
           document.getElementById("courseDuration").value = course.duration;
           document.getElementById("courseStatus").value = course.status;
 
@@ -1343,78 +1821,281 @@
           } finally {
             hideLoading();
           }
-        }, 300); // Debounce search requests
+        }, 300);
+      }
+
+      // Reports Functions
+      async function updateReports() {
+        showLoading();
+        try {
+          const stats = await fetch(`${API_BASE_URL}/api/dashboard/stats`).then(r => r.json());
+          
+          document.getElementById('reportTotalStudents').textContent = stats.totalStudents;
+          document.getElementById('reportActiveStudents').textContent = stats.activeStudents;
+          document.getElementById('reportGraduates').textContent = stats.graduates;
+          document.getElementById('reportCompletionRate').textContent = `${stats.successRate}%`;
+
+          renderCourseChart(stats.courseCounts);
+          renderCoursePerformance(stats.courseCounts);
+          calculateEnrollmentTrends();
+        } catch (error) {
+          console.error('Error updating reports:', error);
+          showNotification('Error loading reports', 'error');
+        } finally {
+          hideLoading();
+        }
+      }
+
+      function renderCourseChart(courseCounts) {
+        const chartContainer = document.getElementById('barChart');
+        chartContainer.innerHTML = '';
+
+        if (!courseCounts || courseCounts.length === 0) {
+          chartContainer.innerHTML = '<p style="color: #64748b;">No data available</p>';
+          return;
+        }
+
+        const maxCount = Math.max(...courseCounts.map(c => c.count));
+        
+        courseCounts.forEach(item => {
+          const course = courses.find(c => c._id === item._id);
+          const courseName = course ? course.name : 'Unknown';
+          const height = (item.count / maxCount) * 100;
+          
+          const bar = document.createElement('div');
+          bar.className = 'bar';
+          bar.style.height = `${height}%`;
+          bar.innerHTML = `
+            ${item.count}
+            <span class="bar-label">${courseName.substring(0, 10)}</span>
+          `;
+          chartContainer.appendChild(bar);
+        });
+      }
+
+      function renderCoursePerformance(courseCounts) {
+        const list = document.getElementById('coursePerformanceList');
+        list.innerHTML = '';
+
+        if (!courseCounts || courseCounts.length === 0) {
+          list.innerHTML = '<li class="stat-item"><span class="stat-label">No courses yet</span></li>';
+          return;
+        }
+
+        courseCounts.forEach(item => {
+          const course = courses.find(c => c._id === item._id);
+          const courseName = course ? course.name : 'Unknown Course';
+          
+          const li = document.createElement('li');
+          li.className = 'stat-item';
+          li.innerHTML = `
+            <span class="stat-label">${escapeHtml(courseName)}</span>
+            <span class="stat-value">${item.count}</span>
+          `;
+          list.appendChild(li);
+        });
+      }
+
+      function calculateEnrollmentTrends() {
+        const now = new Date();
+        const currentMonth = now.getMonth();
+        const currentYear = now.getFullYear();
+
+        const thisMonthStudents = students.filter(s => {
+          const enrollDate = new Date(s.enrollmentDate);
+          return enrollDate.getMonth() === currentMonth && enrollDate.getFullYear() === currentYear;
+        }).length;
+
+        const lastMonth = currentMonth === 0 ? 11 : currentMonth - 1;
+        const lastMonthYear = currentMonth === 0 ? currentYear - 1 : currentYear;
+        const lastMonthStudents = students.filter(s => {
+          const enrollDate = new Date(s.enrollmentDate);
+          return enrollDate.getMonth() === lastMonth && enrollDate.getFullYear() === lastMonthYear;
+        }).length;
+
+        const growth = lastMonthStudents > 0 
+          ? Math.round(((thisMonthStudents - lastMonthStudents) / lastMonthStudents) * 100)
+          : 0;
+
+        document.getElementById('enrollmentThisMonth').textContent = thisMonthStudents;
+        document.getElementById('enrollmentLastMonth').textContent = lastMonthStudents;
+        document.getElementById('enrollmentGrowth').textContent = `${growth >= 0 ? '+' : ''}${growth}%`;
+      }
+
+      function exportReport() {
+        const reportType = document.getElementById('reportType').value;
+        const timePeriod = document.getElementById('timePeriod').value;
+        
+        let reportData = {
+          generatedAt: new Date().toISOString(),
+          reportType,
+          timePeriod,
+          students: students.length,
+          courses: courses.length
+        };
+
+        const dataStr = JSON.stringify(reportData, null, 2);
+        const dataBlob = new Blob([dataStr], { type: 'application/json' });
+        const url = URL.createObjectURL(dataBlob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `report_${reportType}_${Date.now()}.json`;
+        link.click();
+        URL.revokeObjectURL(url);
+        
+        showNotification('Report exported successfully', 'success');
+      }
+
+      // Settings Functions
+      function loadSettings() {
+        const saved = localStorage.getItem('appSettings');
+        if (saved) {
+          appSettings = JSON.parse(saved);
+          applySettings();
+        }
+      }
+
+      function saveSettings() {
+        localStorage.setItem('appSettings', JSON.stringify(appSettings));
+      }
+
+      function applySettings() {
+        if (appSettings.darkMode) {
+          document.body.classList.add('dark-mode');
+          const toggle = document.getElementById('darkModeToggle');
+          if (toggle) toggle.classList.add('active');
+        }
+      }
+
+      function toggleDarkMode() {
+        const toggle = document.getElementById('darkModeToggle');
+        toggle.classList.toggle('active');
+        appSettings.darkMode = toggle.classList.contains('active');
+        document.body.classList.toggle('dark-mode');
+        saveSettings();
+        showNotification(`Dark mode ${appSettings.darkMode ? 'enabled' : 'disabled'}`, 'info');
+      }
+
+      function exportAllData() {
+        const allData = {
+          students: students,
+          courses: courses,
+          exportedAt: new Date().toISOString(),
+          settings: appSettings
+        };
+        
+        const dataStr = JSON.stringify(allData, null, 2);
+        const dataBlob = new Blob([dataStr], { type: 'application/json' });
+        const url = URL.createObjectURL(dataBlob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `edumanager_backup_${Date.now()}.json`;
+        link.click();
+        URL.revokeObjectURL(url);
+        
+        showNotification('All data exported successfully', 'success');
+      }
+
+      function confirmClearAllData() {
+        if (confirm('Are you absolutely sure? This will permanently delete ALL students and courses. This action cannot be undone!')) {
+          if (confirm('Final confirmation: Delete everything?')) {
+            clearAllData();
+          }
+        }
+      }
+
+      async function clearAllData() {
+        showLoading();
+        try {
+          for (const student of students) {
+            await fetch(`${API_BASE_URL}/api/students/${student._id}`, {
+              method: 'DELETE'
+            });
+          }
+          
+          for (const course of courses) {
+            await fetch(`${API_BASE_URL}/api/courses/${course._id}`, {
+              method: 'DELETE'
+            });
+          }
+          
+          students = [];
+          courses = [];
+          
+          await loadStudents();
+          await loadCourses();
+          await updateDashboardStats();
+          
+          showNotification('All data cleared successfully', 'success');
+          navigateToSection('dashboard');
+        } catch (error) {
+          console.error('Error clearing data:', error);
+          showNotification('Error clearing data', 'error');
+        } finally {
+          hideLoading();
+        }
       }
 
       // Utility Functions
-      function formatDate(dateString) {
-        const options = { year: "numeric", month: "short", day: "numeric" };
-        return new Date(dateString).toLocaleDateString(undefined, options);
-      }
-
-      function formatDateForInput(dateString) {
-        return new Date(dateString).toISOString().split("T")[0];
-      }
-
-      function capitalizeFirstLetter(string) {
-        if (!string) return "";
-        return string.charAt(0).toUpperCase() + string.slice(1);
-      }
-
-      function escapeHtml(unsafe) {
-        if (!unsafe) return "";
-        return unsafe
-          .replace(/&/g, "&amp;")
-          .replace(/</g, "&lt;")
-          .replace(/>/g, "&gt;")
-          .replace(/"/g, "&quot;")
-          .replace(/'/g, "&#039;");
-      }
-
-      // Loading Spinner Functions
-      function showLoading() {
-        document.querySelector(".loading-spinner").classList.add("active");
-      }
-
-      function hideLoading() {
-        document.querySelector(".loading-spinner").classList.remove("active");
-      }
-
-      // Notification System
-      function showNotification(message, type = "info") {
-        // Remove any existing notifications
-        const existingNotifications =
-          document.querySelectorAll(".notification");
-        existingNotifications.forEach((notification) => notification.remove());
-
-        // Create new notification
-        const notification = document.createElement("div");
+      function showNotification(message, type = 'info') {
+        const notification = document.createElement('div');
         notification.className = `notification ${type}`;
-        notification.textContent = message;
-
-        // Add notification to the document
+        notification.innerHTML = `
+          <i class="fas fa-${getNotificationIcon(type)}"></i>
+          ${escapeHtml(message)}
+        `;
+        
         document.body.appendChild(notification);
-
-        // Remove notification after delay
+        
         setTimeout(() => {
-          notification.style.opacity = "0";
+          notification.style.opacity = '0';
           setTimeout(() => notification.remove(), 500);
         }, 3000);
       }
 
-      // Error Handler
-      function handleError(error, defaultMessage = "An error occurred") {
-        console.error(error);
-        showNotification(error.message || defaultMessage, "error");
+      function getNotificationIcon(type) {
+        const icons = {
+          success: 'check-circle',
+          error: 'exclamation-circle',
+          warning: 'exclamation-triangle',
+          info: 'info-circle'
+        };
+        return icons[type] || 'info-circle';
       }
 
-      // Update modal close handlers
-      window.onclick = (event) => {
-        if (event.target === studentModal) closeModal();
-        if (event.target === courseModal) closeCourseModal();
-        if (event.target === document.getElementById("deleteConfirmationModal"))
-          closeDeleteModal();
-      };
+      function showLoading() {
+        loadingSpinner.classList.add('active');
+      }
+
+      function hideLoading() {
+        loadingSpinner.classList.remove('active');
+      }
+
+      function formatDate(dateString) {
+        const date = new Date(dateString);
+        return date.toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric'
+        });
+      }
+
+      function formatDateForInput(dateString) {
+        const date = new Date(dateString);
+        return date.toISOString().split('T')[0];
+      }
+
+      function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+      }
+
+      function escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+      }
+
+      document.getElementById('enrollmentDate').valueAsDate = new Date();
     </script>
   </body>
 </html>
